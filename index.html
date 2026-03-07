@@ -1,112 +1,202 @@
 <!doctype html>
 <html lang="en-GB">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aptica Ltd</title>
-  <meta name="description" content="Aptica Ltd builds MAP Energy, a smart energy monitoring and automation app." />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: #ffffff;
-      color: #111;
-      line-height: 1.6;
-    }
-    main {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 60px 20px;
-    }
-    h1 {
-      font-size: 36px;
-      margin-bottom: 8px;
-      letter-spacing: -0.02em;
-    }
-    h2 {
-      font-size: 22px;
-      margin-top: 40px;
-    }
-    p {
-      color: #444;
-    }
-    .logo {
-      font-size: 40px;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-    }
-    .tagline {
-      font-size: 18px;
-      color: #555;
-      margin-bottom: 32px;
-    }
-    .card {
-      background: #f6f7f8;
-      border: 1px solid #e6e8eb;
-      border-radius: 14px;
-      padding: 20px;
-      margin-top: 24px;
-    }
-    a {
-      color: #0b57d0;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      margin-top: 60px;
-      padding-top: 20px;
-      border-top: 1px solid #e6e8eb;
-      font-size: 14px;
-      color: #666;
-    }
-  </style>
+<title>Aptica Ltd</title>
+
+<meta name="description" content="Aptica Ltd develops software focused on energy monitoring, optimisation, and automation." />
+
+<style>
+
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+background:#ffffff;
+color:#111;
+line-height:1.6;
+}
+
+main{
+max-width:900px;
+margin:0 auto;
+padding:70px 20px;
+}
+
+.logo{
+font-size:42px;
+font-weight:700;
+letter-spacing:-0.03em;
+}
+
+.tagline{
+font-size:18px;
+color:#555;
+margin-bottom:40px;
+}
+
+section{
+margin-top:50px;
+}
+
+h2{
+font-size:24px;
+margin-bottom:10px;
+letter-spacing:-0.01em;
+}
+
+p{
+color:#444;
+}
+
+.card{
+background:#f6f7f8;
+border:1px solid #e6e8eb;
+border-radius:14px;
+padding:22px;
+margin-top:16px;
+}
+
+.product{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.product-title{
+font-weight:600;
+font-size:18px;
+}
+
+.links{
+margin-top:10px;
+font-size:15px;
+}
+
+.links a{
+margin-right:14px;
+}
+
+a{
+color:#0b57d0;
+text-decoration:none;
+}
+
+a:hover{
+text-decoration:underline;
+}
+
+footer{
+margin-top:70px;
+padding-top:20px;
+border-top:1px solid #e6e8eb;
+font-size:14px;
+color:#666;
+}
+
+</style>
 </head>
 
 <body>
-  <main>
-    <div class="logo">Aptica</div>
-    <div class="tagline">Smart energy software</div>
 
-    <p>
-      <strong>Aptica Ltd</strong> builds software focused on energy monitoring,
-      optimisation, and automation.
-    </p>
+<main>
 
-    <div class="card">
-      <h2>MAP Energy</h2>
-      <p>
-        MAP Energy is a mobile application that helps users monitor and automate
-        their home energy systems.
-      </p>
-      <p>
-        The app integrates with supported third-party services such as
-        Tesla Energy and Octopus Energy, only with explicit user authorisation.
-      </p>
-    </div>
+<div class="logo">Aptica</div>
+<div class="tagline">Energy software and automation tools</div>
 
-    <div class="card">
-      <h2>Legal & Support</h2>
-      <ul>
-        <li>
-          <a href="/privacy">Privacy Policy</a>
-        </li>
-        <li>
-          Support: <a href="mailto:support@aptica.uk">support@aptica.uk</a>
-        </li>
-      </ul>
-    </div>
+<p>
+<strong>Aptica Ltd</strong> develops software focused on energy monitoring,
+optimisation, and automation.
+</p>
 
-    <footer>
-      © <span id="year"></span> Aptica Ltd<br />
-      Company registered in England and Wales
-    </footer>
-  </main>
+<p>
+Our products integrate with energy platforms and smart devices to help users
+understand their energy usage and automate energy behaviour.
+</p>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<section>
+
+<h2>Products</h2>
+
+<div class="card product">
+
+<div class="product-title">MAP Energy</div>
+
+<p>
+MAP Energy is a mobile application that helps users monitor and automate
+their home energy systems.
+</p>
+
+<p>
+The app integrates with supported third-party energy platforms including
+Tesla Energy, Octopus Energy, and EV charging systems where authorised
+by the user.
+</p>
+
+<div class="links">
+<a href="/map-energy/privacy">Privacy Policy</a>
+<a href="/map-energy/terms">Terms of Service</a>
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>Company</h2>
+
+<div class="card">
+
+<p>
+<strong>Aptica Ltd</strong> is a UK-based software company focused on building
+tools that improve energy transparency, monitoring, and automation.
+</p>
+
+<p>
+We develop products designed to work with existing energy ecosystems and
+third-party services.
+</p>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>Support</h2>
+
+<div class="card">
+
+<p>
+If you need assistance with any Aptica product:
+</p>
+
+<p>
+📧 <a href="mailto:support@aptica.uk">support@aptica.uk</a>
+</p>
+
+</div>
+
+</section>
+
+
+<footer>
+
+© <span id="year"></span> Aptica Ltd  
+<br>
+Company registered in England and Wales
+
+</footer>
+
+</main>
+
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+
 </body>
 </html>
