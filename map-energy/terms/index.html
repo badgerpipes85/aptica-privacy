@@ -76,9 +76,33 @@ padding:24px;
 margin-bottom:20px;
 }
 
+.brand{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo{
+height:40px;
+width:auto;
+}
+
+.brand-text{
+font-size:1.25rem;
+font-weight:600;
+letter-spacing:-0.01em;
+}
+
+.brand-divider{
+height:1px;
+background:var(--border);
+margin:18px 0 22px;
+}
+
 h1{
-margin:0 0 8px;
-font-size:2.5rem;
+margin:0 0 10px;
+font-size:clamp(2rem,5vw,2.7rem);
+line-height:1.06;
 letter-spacing:-0.02em;
 }
 
@@ -159,6 +183,13 @@ color:var(--text-secondary);
 
 <header class="hero">
 
+<div class="brand">
+<img src="/MAP Logo.png" alt="MAP Energy Logo" class="logo">
+<span class="brand-text">MAP Energy</span>
+</div>
+
+<div class="brand-divider"></div>
+
 <h1>Terms of Service</h1>
 
 <p>
@@ -185,6 +216,7 @@ March 2026
 </div>
 
 </header>
+
 
 
 <div class="section-card">
@@ -214,13 +246,9 @@ MAP Energy is currently intended for users located in the United Kingdom.
 <h2>2. Eligibility</h2>
 
 <ul>
-
 <li>You must be at least <strong>13 years old</strong> to use MAP Energy.</li>
-
 <li>If you are under 18, you must have permission from a parent or guardian.</li>
-
 <li>You must ensure that any energy systems connected to MAP Energy belong to you or that you have permission to connect them.</li>
-
 </ul>
 
 </div>
@@ -234,19 +262,12 @@ MAP Energy is currently intended for users located in the United Kingdom.
 <p>MAP Energy may provide the following functionality:</p>
 
 <ul>
-
 <li>Viewing energy telemetry from connected systems</li>
-
 <li>Monitoring solar generation, battery state of charge, and grid import/export</li>
-
 <li>Monitoring EV charging power</li>
-
 <li>Creating automations based on energy conditions</li>
-
 <li>Sending notifications based on events</li>
-
 <li>Displaying data retrieved from third-party services</li>
-
 </ul>
 
 <p>
@@ -262,22 +283,18 @@ Subscriptions unlock premium features such as advanced automation capabilities.
 
 <h2>4. Third-Party Services</h2>
 
-<p>
-MAP Energy integrates with third-party services, which may include:
-</p>
+<p>MAP Energy integrates with third-party services, including:</p>
 
 <ul>
-
 <li>Tesla Energy APIs</li>
 <li>Octopus Energy APIs</li>
 <li>myenergi / Zappi APIs</li>
 <li>Apple Sign-In</li>
 <li>Apple Push Notification Service</li>
-
 </ul>
 
 <p>
-These services are operated by third parties and are subject to their own
+These services are operated by third parties and subject to their own
 terms and privacy policies.
 </p>
 
@@ -298,26 +315,19 @@ MAP Energy may allow users to configure automations that interact with connected
 </p>
 
 <div class="notice">
-
-Users remain fully responsible for verifying all automation settings and outcomes.
-
+Users remain fully responsible for verifying automation settings and outcomes.
 </div>
 
 <ul>
-
 <li>Automations may fail to execute</li>
-
 <li>External services may be unavailable</li>
-
 <li>Energy prices or tariffs may change</li>
-
-<li>Device states may change outside of the app</li>
-
+<li>Device states may change outside the app</li>
 </ul>
 
 <p>
-You must ensure that any energy configuration changes remain appropriate for your
-system and tariff conditions.
+You must ensure that any energy configuration changes remain appropriate
+for your system and tariff conditions.
 </p>
 
 </div>
@@ -333,8 +343,7 @@ MAP Energy is provided <strong>"as is"</strong> and <strong>"as available"</stro
 </p>
 
 <p>
-We do not guarantee that the service will always be available,
-error-free, or uninterrupted.
+We do not guarantee uninterrupted or error-free service.
 </p>
 
 <p>
@@ -354,28 +363,20 @@ To the maximum extent permitted by law, Aptica Ltd shall not be liable for:
 </p>
 
 <ul>
-
 <li>Energy costs or tariff decisions</li>
-
 <li>Charging schedules or automation behaviour</li>
-
 <li>Battery usage or export configuration</li>
-
 <li>Loss caused by third-party API failures</li>
-
 <li>Indirect or consequential losses</li>
-
 <li>Loss of energy revenue or savings</li>
-
 </ul>
 
 <p>
-You are responsible for verifying all energy actions and automation behaviour.
+You remain responsible for verifying all energy actions and automation behaviour.
 </p>
 
 <p>
-Nothing in these terms excludes liability that cannot legally be excluded
-under UK law.
+Nothing in these terms excludes liability that cannot legally be excluded under UK law.
 </p>
 
 </div>
@@ -386,18 +387,11 @@ under UK law.
 
 <h2>8. User Responsibilities</h2>
 
-<p>When using MAP Energy you agree to:</p>
-
 <ul>
-
 <li>Provide accurate credentials when connecting services</li>
-
 <li>Disconnect services you no longer wish to use</li>
-
 <li>Review automation settings regularly</li>
-
 <li>Ensure your energy configuration remains appropriate</li>
-
 </ul>
 
 </div>
@@ -409,19 +403,12 @@ under UK law.
 <h2>9. Termination</h2>
 
 <p>
-We may suspend or terminate access to the service if:
+We may suspend or terminate access if the service is misused,
+third-party access is revoked, or the platform is discontinued.
 </p>
 
-<ul>
-
-<li>the service is misused</li>
-<li>third-party access is revoked</li>
-<li>the platform is discontinued</li>
-
-</ul>
-
 <p>
-Users may disconnect services or stop using the app at any time.
+Users may stop using the app or disconnect services at any time.
 </p>
 
 </div>
@@ -437,7 +424,7 @@ We may modify, update, or discontinue parts of the service at any time.
 </p>
 
 <p>
-Premium features, automation functionality, or integrations may change over time.
+Features, integrations, and subscription functionality may change over time.
 </p>
 
 </div>
@@ -473,6 +460,7 @@ If you have questions about these Terms of Service:
 </p>
 
 </div>
+
 
 
 <footer>
