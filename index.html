@@ -1,1 +1,405 @@
-<!doctype html> <html lang="en-GB"> <head> <meta charset="utf-8" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>Aptica Ltd</title> <meta name="description" content="Aptica Ltd develops thoughtful software products across consumer and business categories." /> <style> :root{ --bg:#f6f7fb; --bg-accent-1:rgba(103,80,164,0.10); --bg-accent-2:rgba(17,24,39,0.05); --card:rgba(255,255,255,0.78); --border:rgba(17,24,39,0.08); --text:#111827; --text-secondary:#5b6472; --heading:#0f172a; --link:#5b4ce6; --link-hover:#4338ca; --shadow:0 14px 34px rgba(15,23,42,0.07); --radius-xl:24px; --radius-lg:18px; --radius-md:14px; --max:1040px; } @media (prefers-color-scheme: dark){ :root{ --bg:#0b1020; --bg-accent-1:rgba(129,140,248,0.12); --bg-accent-2:rgba(255,255,255,0.04); --card:rgba(17,24,39,0.72); --border:rgba(255,255,255,0.08); --text:#eef2ff; --text-secondary:#a7b0c0; --heading:#ffffff; --link:#a78bfa; --link-hover:#c4b5fd; --shadow:0 18px 40px rgba(0,0,0,0.28); } } *{ box-sizing:border-box; } html{ scroll-behavior:smooth; } body{ margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; color:var(--text); line-height:1.65; background: radial-gradient(circle at top left, var(--bg-accent-1), transparent 32%), radial-gradient(circle at top right, var(--bg-accent-2), transparent 28%), var(--bg); } a{ color:var(--link); text-decoration:none; } a:hover{ color:var(--link-hover); text-decoration:underline; } .page{ max-width:var(--max); margin:0 auto; padding:28px 18px 60px; } .hero{ padding:42px 0 22px; } .eyebrow{ display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; background:rgba(91,76,230,0.10); border:1px solid rgba(91,76,230,0.12); color:var(--link); font-size:0.85rem; font-weight:700; letter-spacing:0.01em; margin-bottom:18px; } .eyebrow::before{ content:""; width:8px; height:8px; border-radius:999px; background:currentColor; opacity:0.85; } .hero-grid{ display:grid; grid-template-columns:1.2fr 0.8fr; gap:22px; align-items:start; } @media (max-width: 860px){ .hero-grid{ grid-template-columns:1fr; } } .hero-copy h1{ margin:0 0 14px; font-size:clamp(2.5rem, 7vw, 4.4rem); line-height:0.97; letter-spacing:-0.045em; color:var(--heading); } .hero-copy p{ margin:0 0 14px; max-width:680px; font-size:1.05rem; color:var(--text-secondary); } .hero-actions{ display:flex; flex-wrap:wrap; gap:12px; margin-top:20px; } .btn{ display:inline-flex; align-items:center; justify-content:center; padding:12px 16px; border-radius:14px; font-weight:600; text-decoration:none; transition:transform 0.15s ease, opacity 0.15s ease; } .btn:hover{ transform:translateY(-1px); text-decoration:none; } .btn-primary{ background:var(--heading); color:#fff; } .btn-primary:hover{ color:#fff; opacity:0.92; } .btn-secondary{ background:var(--card); color:var(--heading); border:1px solid var(--border); box-shadow:var(--shadow); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); } .hero-panel, .section-card, .product-card{ background:var(--card); border:1px solid var(--border); border-radius:var(--radius-xl); box-shadow:var(--shadow); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); } .hero-panel{ padding:18px; } .metric{ padding:14px 14px 16px; border-radius:16px; background:rgba(255,255,255,0.34); border:1px solid var(--border); } @media (prefers-color-scheme: dark){ .metric{ background:rgba(255,255,255,0.02); } } .metric + .metric{ margin-top:12px; } .metric-label{ display:block; margin-bottom:4px; font-size:0.82rem; color:var(--text-secondary); } .metric-value{ font-size:1rem; font-weight:700; color:var(--heading); } .section{ margin-top:34px; } .section-title{ margin:0 0 14px; font-size:1.45rem; letter-spacing:-0.02em; color:var(--heading); } .section-card{ padding:22px; } .products-grid{ display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:18px; } @media (max-width: 760px){ .products-grid{ grid-template-columns:1fr; } } .product-card{ padding:22px; } .product-badge{ display:inline-block; padding:7px 11px; border-radius:999px; font-size:0.78rem; font-weight:700; background:rgba(17,24,39,0.08); color:var(--heading); margin-bottom:12px; } @media (prefers-color-scheme: dark){ .product-badge{ background:rgba(255,255,255,0.08); } } .product-title{ margin:0 0 10px; font-size:1.18rem; font-weight:700; color:var(--heading); } .product-card p{ margin:0 0 12px; color:var(--text-secondary); } .product-links{ display:flex; flex-wrap:wrap; gap:14px; margin-top:12px; } .product-links a{ font-weight:600; } .muted-list{ margin:10px 0 0 18px; color:var(--text-secondary); } footer{ margin-top:46px; padding-top:18px; border-top:1px solid var(--border); color:var(--text-secondary); font-size:0.95rem; } </style> </head> <body> <div class="page"> <section class="hero"> <div class="eyebrow">Aptica Ltd</div> <div class="hero-grid"> <div class="hero-copy"> <h1>Software products with clarity, utility, and staying power.</h1> <p> Aptica Ltd develops software across consumer and business categories, with a focus on thoughtful product design, practical functionality, and reliable user experience. </p> <p> Our products may span energy, lifestyle, automation, and other software-led experiences. </p> </div> <div class="hero-panel"> <div class="metric"> <span class="metric-label">Company</span> <span class="metric-value">Aptica Ltd</span> </div> <div class="metric"> <span class="metric-label">Focus</span> <span class="metric-value">Product software and digital tools</span> </div> <div class="metric"> <span class="metric-label">Support</span> <span class="metric-value"><a href="mailto:support@aptica.uk">support@aptica.uk</a></span> </div> </div> </div> </section> <section class="section"> <h2 class="section-title">Products</h2> <div class="products-grid"> <article class="product-card"> <div class="product-badge">Live</div> <h3 class="product-title">MAP Energy</h3> <p> A mobile application for monitoring and automating home energy systems, with support for compatible third-party platforms and connected services. </p> <div class="product-links"> <a href="/map-energy/privacy">Privacy Policy</a> <a href="/map-energy/terms">Terms of Service</a> </div> </article> <article class="product-card"> <div class="product-badge">Coming soon</div> <h3 class="product-title">Wine Club Hub</h3> <p> A forthcoming product focused on wine club experiences, member engagement, and supporting features for discovery and community. </p> </article> </div> </section> <section class="section"> <h2 class="section-title">About Aptica</h2> <div class="section-card"> <p> Aptica Ltd is a UK software company building focused digital products for real-world use cases. </p> <p> We design and operate applications that integrate with third-party platforms where appropriate, while keeping user experience, security, and maintainability at the centre of product development. </p> </div> </section> <section class="section"> <h2 class="section-title">Support</h2> <div class="section-card"> <p> For product, support, or legal enquiries, contact: <strong><a href="mailto:support@aptica.uk">support@aptica.uk</a></strong> </p> <ul class="muted-list"> <li>Product support</li> <li>Privacy and legal enquiries</li> <li>Developer contact</li> </ul> </div> </section> <footer> © <span id="year"></span> Aptica Ltd<br /> Company registered in England and Wales </footer> </div> <script> document.getElementById("year").textContent = new Date().getFullYear(); </script> </body> </html>
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Aptica Ltd</title>
+
+<meta name="description" content="Aptica Ltd develops thoughtful software products across consumer and business categories." />
+
+<style>
+
+:root{
+--bg:#f6f7fb;
+--bg-accent-1:rgba(103,80,164,0.10);
+--bg-accent-2:rgba(17,24,39,0.05);
+--card:rgba(255,255,255,0.78);
+--border:rgba(17,24,39,0.08);
+--text:#111827;
+--text-secondary:#5b6472;
+--heading:#0f172a;
+--link:#5b4ce6;
+--link-hover:#4338ca;
+--shadow:0 14px 34px rgba(15,23,42,0.07);
+--radius-xl:24px;
+--radius-lg:18px;
+--radius-md:14px;
+--max:1040px;
+}
+
+@media (prefers-color-scheme: dark){
+:root{
+--bg:#0b1020;
+--bg-accent-1:rgba(129,140,248,0.12);
+--bg-accent-2:rgba(255,255,255,0.04);
+--card:rgba(17,24,39,0.72);
+--border:rgba(255,255,255,0.08);
+--text:#eef2ff;
+--text-secondary:#a7b0c0;
+--heading:#ffffff;
+--link:#a78bfa;
+--link-hover:#c4b5fd;
+--shadow:0 18px 40px rgba(0,0,0,0.28);
+}
+}
+
+*{ box-sizing:border-box; }
+
+html{ scroll-behavior:smooth; }
+
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+color:var(--text);
+line-height:1.65;
+background:
+radial-gradient(circle at top left, var(--bg-accent-1), transparent 32%),
+radial-gradient(circle at top right, var(--bg-accent-2), transparent 28%),
+var(--bg);
+}
+
+a{
+color:var(--link);
+text-decoration:none;
+}
+
+a:hover{
+color:var(--link-hover);
+text-decoration:underline;
+}
+
+.page{
+max-width:var(--max);
+margin:0 auto;
+padding:28px 18px 60px;
+}
+
+.hero{
+padding:42px 0 22px;
+}
+
+.eyebrow{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:8px 12px;
+border-radius:999px;
+background:rgba(91,76,230,0.10);
+border:1px solid rgba(91,76,230,0.12);
+color:var(--link);
+font-size:0.85rem;
+font-weight:700;
+letter-spacing:0.01em;
+margin-bottom:18px;
+}
+
+.eyebrow::before{
+content:"";
+width:8px;
+height:8px;
+border-radius:999px;
+background:currentColor;
+opacity:0.85;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.2fr 0.8fr;
+gap:22px;
+align-items:start;
+}
+
+@media (max-width: 860px){
+.hero-grid{
+grid-template-columns:1fr;
+}
+}
+
+.hero-copy h1{
+margin:0 0 14px;
+font-size:clamp(2.5rem, 7vw, 4.4rem);
+line-height:0.97;
+letter-spacing:-0.045em;
+color:var(--heading);
+}
+
+.hero-copy p{
+margin:0 0 14px;
+max-width:680px;
+font-size:1.05rem;
+color:var(--text-secondary);
+}
+
+.hero-panel,
+.section-card,
+.product-card{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:var(--radius-xl);
+box-shadow:var(--shadow);
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
+}
+
+.hero-panel{
+padding:18px;
+}
+
+.metric{
+padding:14px 14px 16px;
+border-radius:16px;
+background:rgba(255,255,255,0.34);
+border:1px solid var(--border);
+}
+
+@media (prefers-color-scheme: dark){
+.metric{
+background:rgba(255,255,255,0.02);
+}
+}
+
+.metric + .metric{
+margin-top:12px;
+}
+
+.metric-label{
+display:block;
+margin-bottom:4px;
+font-size:0.82rem;
+color:var(--text-secondary);
+}
+
+.metric-value{
+font-size:1rem;
+font-weight:700;
+color:var(--heading);
+}
+
+.section{
+margin-top:34px;
+}
+
+.section-title{
+margin:0 0 14px;
+font-size:1.45rem;
+letter-spacing:-0.02em;
+color:var(--heading);
+}
+
+.section-card{
+padding:22px;
+}
+
+.products-grid{
+display:grid;
+grid-template-columns:repeat(2, minmax(0, 1fr));
+gap:18px;
+}
+
+@media (max-width: 760px){
+.products-grid{
+grid-template-columns:1fr;
+}
+}
+
+.product-card{
+padding:22px;
+}
+
+.product-badge{
+display:inline-block;
+padding:7px 11px;
+border-radius:999px;
+font-size:0.78rem;
+font-weight:700;
+background:rgba(17,24,39,0.08);
+color:var(--heading);
+margin-bottom:12px;
+}
+
+@media (prefers-color-scheme: dark){
+.product-badge{
+background:rgba(255,255,255,0.08);
+}
+}
+
+.product-title{
+margin:0 0 10px;
+font-size:1.18rem;
+font-weight:700;
+color:var(--heading);
+}
+
+.product-card p{
+margin:0 0 12px;
+color:var(--text-secondary);
+}
+
+.product-links{
+display:flex;
+flex-wrap:wrap;
+gap:14px;
+margin-top:12px;
+}
+
+.product-links a{
+font-weight:600;
+}
+
+.muted-list{
+margin:10px 0 0 18px;
+color:var(--text-secondary);
+}
+
+footer{
+margin-top:46px;
+padding-top:18px;
+border-top:1px solid var(--border);
+color:var(--text-secondary);
+font-size:0.95rem;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<section class="hero">
+
+<div class="eyebrow">
+<img src="aptica-logo.png" alt="Aptica Ltd logo" style="height:36px; vertical-align:middle;">
+</div>
+
+<div class="hero-grid">
+
+<div class="hero-copy">
+
+<h1>Software products with clarity, utility, and staying power.</h1>
+
+<p>
+Aptica Ltd develops software across consumer and business categories,
+with a focus on thoughtful product design, practical functionality,
+and reliable user experience.
+</p>
+
+<p>
+Our products may span energy, lifestyle, automation, and other software-led experiences.
+</p>
+
+</div>
+
+<div class="hero-panel">
+
+<div class="metric">
+<span class="metric-label">Company</span>
+<span class="metric-value">Aptica Ltd</span>
+</div>
+
+<div class="metric">
+<span class="metric-label">Focus</span>
+<span class="metric-value">Product software and digital tools</span>
+</div>
+
+<div class="metric">
+<span class="metric-label">Support</span>
+<span class="metric-value"><a href="mailto:support@aptica.uk">support@aptica.uk</a></span>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Products</h2>
+
+<div class="products-grid">
+
+<article class="product-card">
+<div class="product-badge">Live</div>
+<h3 class="product-title">MAP Energy</h3>
+
+<p>
+A mobile application for monitoring and automating home energy systems,
+with support for compatible third-party platforms and connected services.
+</p>
+
+<div class="product-links">
+<a href="/map-energy/privacy">Privacy Policy</a>
+<a href="/map-energy/terms">Terms of Service</a>
+</div>
+
+</article>
+
+<article class="product-card">
+
+<div class="product-badge">Coming soon</div>
+
+<h3 class="product-title">Wine Club Hub</h3>
+
+<p>
+A forthcoming product focused on wine club experiences, member engagement,
+and supporting features for discovery and community.
+</p>
+
+</article>
+
+</div>
+</section>
+
+<section class="section">
+
+<h2 class="section-title">About Aptica</h2>
+
+<div class="section-card">
+
+<p>
+Aptica Ltd is a UK software company building focused digital products for real-world use cases.
+</p>
+
+<p>
+We design and operate applications that integrate with third-party platforms where appropriate,
+while keeping user experience, security, and maintainability at the centre of product development.
+</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Support</h2>
+
+<div class="section-card">
+
+<p>
+For product, support, or legal enquiries, contact:
+<strong><a href="mailto:support@aptica.uk">support@aptica.uk</a></strong>
+</p>
+
+<ul class="muted-list">
+<li>Product support</li>
+<li>Privacy and legal enquiries</li>
+<li>Developer contact</li>
+</ul>
+
+</div>
+
+</section>
+
+<footer>
+© <span id="year"></span> Aptica Ltd<br />
+Company registered in England and Wales
+</footer>
+
+</div>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
