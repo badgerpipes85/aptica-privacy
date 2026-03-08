@@ -134,9 +134,12 @@
     }
     
     .product-logo{
-      height:0.9em;
-      width:auto;
-      object-fit:contain;
+      height:12px !important;
+      width:auto !important;
+      max-height:12px !important;
+      display:inline-block;
+      vertical-align:middle;
+      flex:0 0 auto;
     }
 
     .hero-copy h1{
@@ -332,7 +335,6 @@
     <section class="hero">
       <div class="brand">
         <img src="aptica-logo.png" alt="Aptica Ltd logo" class="brand-logo" />
-        <div class="eyebrow">Aptica Ltd</div>
       </div>
 
       <div class="hero-grid">
@@ -377,7 +379,7 @@
           <div class="product-badge">Live</div>
           <h3 class="product-title">
             <img src="MAP Logo.png" alt="MAP Energy logo" class="product-logo">
-            MAP Energy
+            <span>MAP Energy</span>
           </h3>
           <p>
             A mobile application for monitoring and automating home energy systems,
