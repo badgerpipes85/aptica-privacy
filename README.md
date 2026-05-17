@@ -1,1 +1,1 @@
-# aptica-privacy
+# aptica
