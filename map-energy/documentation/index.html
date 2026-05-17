@@ -1,1 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAP Energy Documentation | Aptica</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f1720;
+      color: #f5f7fa;
+      line-height: 1.6;
+    }
 
+    header {
+      padding: 48px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #0f1720, #123c69);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+    }
+
+    header p {
+      max-width: 720px;
+      margin: 16px auto 0;
+      color: #cbd5e1;
+      font-size: 1.1rem;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .card {
+      background: #182433;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 22px;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #58d68d;
+      font-size: 1.25rem;
+    }
+
+    .card p {
+      color: #cbd5e1;
+      margin-bottom: 0;
+    }
+
+    section {
+      margin-top: 42px;
+    }
+
+    h2 {
+      color: #58d68d;
+    }
+
+    a {
+      color: #6bb7ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px 20px;
+      color: #94a3b8;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MAP Energy Documentation</h1>
+    <p>
+      Guidance for setting up MAP Energy, connecting energy systems, using Tesla Powerwall diagnostics,
+      and understanding the data shown in the app.
+    </p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Getting Started</h2>
+      <p>
+        MAP Energy helps you monitor and understand your connected energy systems, including Tesla Powerwall,
+        solar generation, EV charging and future smart home energy integrations.
+      </p>
+    </section>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Install MAP Energy</h2>
+        <p>
+          Download MAP Energy from Google Play, create an account, and sign in to begin connecting your energy devices.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Tesla Connection</h2>
+        <p>
+          Connect your Tesla account to allow MAP Energy to access supported Powerwall and Tesla energy data.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Powerwall Local Pairing</h2>
+        <p>
+          Local pairing enables advanced Powerwall diagnostics, including live local data and future battery health insights.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Powerwall Diagnostics</h2>
+        <p>
+          View system capacity, battery state of charge, gateway information, voltage, frequency and other diagnostic values.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Solar & EV Integrations</h2>
+        <p>
+          MAP Energy is being built to support solar monitoring, EV charging data and smart energy device integrations.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Troubleshooting</h2>
+        <p>
+          Find help for connection issues, pairing problems, subscription access and local Powerwall communication.
+        </p>
+      </div>
+    </div>
+
+    <section>
+      <h2>Useful Links</h2>
+      <p>
+        <a href="https://play.google.com/store/apps/details?id=com.mapenergy.app&pcampaignid=web_share">
+          Download MAP Energy on Google Play
+        </a>
+      </p>
+      <p>
+        <a href="/map-energy/privacy/">Privacy Policy</a>
+      </p>
+      <p>
+        <a href="/map-energy/terms/">Terms of Service</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Documentation Status</h2>
+      <p>
+        This documentation is an early first draft and will be expanded as MAP Energy features are released.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © Aptica Ltd — MAP Energy
+  </footer>
+</body>
+</html>
