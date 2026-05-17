@@ -1,77 +1,320 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MAP Energy Documentation | Aptica</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Documentation – MAP Energy</title>
+  <meta name="description" content="Documentation for MAP Energy, operated by Aptica Ltd." />
   <style>
+    :root {
+      color-scheme: light dark;
+
+      --brand-blue: #2f80ed;
+      --brand-grey: #8c98a8;
+      --energy-yellow: #f2c94c;
+
+      --bg-primary: #f7f9fc;
+      --bg-card: rgba(255,255,255,0.82);
+      --border: rgba(47, 128, 237, 0.14);
+      --text-primary: #17212f;
+      --text-secondary: #5f6b7a;
+      --success: #27ae60;
+      --warning: #f2994a;
+      --error: #eb5757;
+
+      --shadow: 0 12px 30px rgba(24, 39, 75, 0.08);
+      --radius-xl: 22px;
+      --radius-lg: 16px;
+      --radius-md: 14px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-primary: #0d1117;
+        --bg-card: rgba(22, 27, 34, 0.88);
+        --border: rgba(255,255,255,0.08);
+        --text-primary: #f3f6fb;
+        --text-secondary: #a9b4c2;
+        --shadow: 0 16px 36px rgba(0, 0, 0, 0.34);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f1720;
-      color: #f5f7fa;
-      line-height: 1.6;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text-primary);
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(47, 128, 237, 0.18) 0%,
+          rgba(242, 201, 76, 0.10) 30%,
+          var(--bg-primary) 70%
+        );
+      min-height: 100vh;
     }
 
-    header {
-      padding: 48px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #0f1720, #123c69);
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.4rem;
-    }
-
-    header p {
-      max-width: 720px;
-      margin: 16px auto 0;
-      color: #cbd5e1;
-      font-size: 1.1rem;
-    }
-
-    main {
+    .shell {
       max-width: 980px;
       margin: 0 auto;
-      padding: 32px 20px 60px;
+      padding: 28px 18px 64px;
     }
 
-    .grid {
+    .hero {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 24px 22px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem,5vw,2.7rem);
+      line-height: 1.06;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 1rem;
+    }
+
+    .hero-meta {
+      margin-top: 16px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .mini-card {
+      background: rgba(255,255,255,0.36);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .mini-card {
+        background: rgba(255,255,255,0.03);
+      }
+    }
+
+    .mini-label {
+      display: block;
+      color: var(--text-secondary);
+      font-size: 0.82rem;
+      margin-bottom: 4px;
+    }
+
+    .mini-value {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .notice {
+      margin: 18px 0 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 16px 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .notice strong {
+      color: var(--brand-blue);
+    }
+
+    .layout {
+      display: grid;
       gap: 18px;
+      grid-template-columns: 260px 1fr;
+      align-items: start;
+    }
+
+    @media (max-width: 860px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .toc,
+    .content-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .toc {
+      position: sticky;
+      top: 18px;
+      padding: 18px 16px;
+    }
+
+    @media (max-width: 860px) {
+      .toc {
+        position: static;
+      }
+    }
+
+    .toc h2 {
+      margin: 0 0 12px;
+      font-size: 1rem;
+    }
+
+    .toc ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+    }
+
+    .toc a {
+      display: block;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.95rem;
+      border-radius: 10px;
+      padding: 8px 10px;
+      transition: 0.15s ease;
+    }
+
+    .toc a:hover {
+      background: rgba(47, 128, 237, 0.10);
+      color: var(--brand-blue);
+    }
+
+    .content-card {
+      padding: 24px 22px 30px;
+    }
+
+    section + section {
       margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
     }
 
-    .card {
-      background: #182433;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 18px;
-      padding: 22px;
+    h2.section-title {
+      margin: 0 0 12px;
+      font-size: 1.28rem;
+      letter-spacing: -0.01em;
     }
 
-    .card h2 {
-      margin-top: 0;
-      color: #58d68d;
-      font-size: 1.25rem;
+    h3 {
+      margin: 18px 0 8px;
+      font-size: 1rem;
+      color: var(--brand-blue);
     }
 
-    .card p {
-      color: #cbd5e1;
-      margin-bottom: 0;
+    p {
+      margin: 10px 0;
+      font-size: 1rem;
+      color: var(--text-primary);
     }
 
-    section {
-      margin-top: 42px;
+    ul {
+      margin: 10px 0 10px 1.1rem;
+      padding: 0;
     }
 
-    h2 {
-      color: #58d68d;
+    li {
+      margin: 7px 0;
+      color: var(--text-primary);
+    }
+
+    .muted {
+      color: var(--text-secondary);
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 12px 0 4px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border: 1px solid transparent;
+    }
+
+    .badge-blue {
+      color: var(--brand-blue);
+      background: rgba(47, 128, 237, 0.12);
+      border-color: rgba(47, 128, 237, 0.22);
+    }
+
+    .badge-yellow {
+      color: #8a6400;
+      background: rgba(242, 201, 76, 0.18);
+      border-color: rgba(242, 201, 76, 0.26);
+    }
+
+    .badge-green {
+      color: var(--success);
+      background: rgba(39, 174, 96, 0.12);
+      border-color: rgba(39, 174, 96, 0.22);
+    }
+
+    .callout {
+      border-left: 4px solid var(--brand-blue);
+      background: rgba(47, 128, 237, 0.08);
+      border-radius: 12px;
+      padding: 14px 14px 14px 16px;
+      margin: 14px 0;
+    }
+
+    .callout p {
+      margin: 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .logo {
+      height: 40px;
+      width: auto;
+    }
+
+    .brand-text {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .brand-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 18px 0 22px;
     }
 
     a {
-      color: #6bb7ff;
+      color: var(--brand-blue);
       text-decoration: none;
     }
 
@@ -80,100 +323,235 @@
     }
 
     footer {
+      margin-top: 24px;
       text-align: center;
-      padding: 28px 20px;
-      color: #94a3b8;
-      border-top: 1px solid rgba(255,255,255,0.08);
+      color: var(--text-secondary);
+      font-size: 0.94rem;
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>MAP Energy Documentation</h1>
-    <p>
-      Guidance for setting up MAP Energy, connecting energy systems, using Tesla Powerwall diagnostics,
-      and understanding the data shown in the app.
-    </p>
-  </header>
+  <div class="shell">
+    <header class="hero">
+      <div class="brand">
+        <img src="/MAP Logo.png" alt="MAP Energy Logo" class="logo">
+        <span class="brand-text">MAP Energy</span>
+      </div>
 
-  <main>
-    <section>
-      <h2>Getting Started</h2>
+      <div class="brand-divider"></div>
+
+      <h1>Documentation</h1>
       <p>
-        MAP Energy helps you monitor and understand your connected energy systems, including Tesla Powerwall,
-        solar generation, EV charging and future smart home energy integrations.
+        Quick start documentation for MAP Energy, including setup, Tesla connection,
+        Powerwall diagnostics, subscriptions and troubleshooting.
       </p>
-    </section>
 
-    <div class="grid">
-      <div class="card">
-        <h2>Install MAP Energy</h2>
-        <p>
-          Download MAP Energy from Google Play, create an account, and sign in to begin connecting your energy devices.
-        </p>
+      <div class="hero-meta">
+        <div class="mini-card">
+          <span class="mini-label">Product</span>
+          <span class="mini-value">MAP Energy</span>
+        </div>
+        <div class="mini-card">
+          <span class="mini-label">Operator</span>
+          <span class="mini-value">Aptica Ltd</span>
+        </div>
+        <div class="mini-card">
+          <span class="mini-label">Contact</span>
+          <span class="mini-value"><a href="mailto:support@aptica.uk">support@aptica.uk</a></span>
+        </div>
       </div>
+    </header>
 
-      <div class="card">
-        <h2>Tesla Connection</h2>
-        <p>
-          Connect your Tesla account to allow MAP Energy to access supported Powerwall and Tesla energy data.
-        </p>
-      </div>
-
-      <div class="card">
-        <h2>Powerwall Local Pairing</h2>
-        <p>
-          Local pairing enables advanced Powerwall diagnostics, including live local data and future battery health insights.
-        </p>
-      </div>
-
-      <div class="card">
-        <h2>Powerwall Diagnostics</h2>
-        <p>
-          View system capacity, battery state of charge, gateway information, voltage, frequency and other diagnostic values.
-        </p>
-      </div>
-
-      <div class="card">
-        <h2>Solar & EV Integrations</h2>
-        <p>
-          MAP Energy is being built to support solar monitoring, EV charging data and smart energy device integrations.
-        </p>
-      </div>
-
-      <div class="card">
-        <h2>Troubleshooting</h2>
-        <p>
-          Find help for connection issues, pairing problems, subscription access and local Powerwall communication.
-        </p>
-      </div>
+    <div class="notice">
+      <p>
+        This documentation is an early first draft and will be expanded as more MAP Energy
+        features and integrations are released.
+      </p>
     </div>
 
-    <section>
-      <h2>Useful Links</h2>
-      <p>
-        <a href="https://play.google.com/store/apps/details?id=com.mapenergy.app&pcampaignid=web_share">
-          Download MAP Energy on Google Play
-        </a>
-      </p>
-      <p>
-        <a href="/map-energy/privacy/">Privacy Policy</a>
-      </p>
-      <p>
-        <a href="/map-energy/terms/">Terms of Service</a>
-      </p>
-    </section>
+    <div class="layout">
+      <aside class="toc">
+        <h2>Contents</h2>
+        <ul>
+          <li><a href="#getting-started">1. Getting started</a></li>
+          <li><a href="#installing">2. Installing MAP Energy</a></li>
+          <li><a href="#account">3. Account setup</a></li>
+          <li><a href="#tesla">4. Tesla connection</a></li>
+          <li><a href="#powerwall-pairing">5. Powerwall local pairing</a></li>
+          <li><a href="#diagnostics">6. Powerwall diagnostics</a></li>
+          <li><a href="#premium">7. Premium access</a></li>
+          <li><a href="#troubleshooting">8. Troubleshooting</a></li>
+          <li><a href="#links">9. Useful links</a></li>
+          <li><a href="#contact">10. Contact</a></li>
+        </ul>
+      </aside>
 
-    <section>
-      <h2>Documentation Status</h2>
-      <p>
-        This documentation is an early first draft and will be expanded as MAP Energy features are released.
-      </p>
-    </section>
-  </main>
+      <article class="content-card">
+        <section id="getting-started">
+          <h2 class="section-title">1. Getting started</h2>
+          <p>
+            MAP Energy helps you monitor and understand connected energy systems, including
+            Tesla Powerwall, solar generation, EV charging and future smart energy integrations.
+          </p>
 
-  <footer>
-    © Aptica Ltd — MAP Energy
-  </footer>
+          <div class="badge-row">
+            <span class="badge badge-blue">Tesla Powerwall</span>
+            <span class="badge badge-yellow">Solar monitoring</span>
+            <span class="badge badge-green">EV charging</span>
+          </div>
+        </section>
+
+        <section id="installing">
+          <h2 class="section-title">2. Installing MAP Energy</h2>
+          <p>
+            MAP Energy is available on Google Play for Android devices.
+          </p>
+          <p>
+            <a href="https://play.google.com/store/apps/details?id=com.mapenergy.app&pcampaignid=web_share">
+              Download MAP Energy on Google Play
+            </a>
+          </p>
+        </section>
+
+        <section id="account">
+          <h2 class="section-title">3. Account setup</h2>
+          <p>
+            After installing the app, create or sign into your MAP Energy account. Your account is
+            used to securely link supported energy services and manage premium access.
+          </p>
+          <ul>
+            <li>Install MAP Energy</li>
+            <li>Open the app</li>
+            <li>Sign in or create an account</li>
+            <li>Connect supported energy services</li>
+          </ul>
+        </section>
+
+        <section id="tesla">
+          <h2 class="section-title">4. Tesla connection</h2>
+          <p>
+            MAP Energy can connect to Tesla Energy services to retrieve supported Powerwall and
+            energy site data.
+          </p>
+          <p>
+            Tesla connection is used for supported cloud-based data. Some advanced diagnostic
+            features may also require local Powerwall pairing.
+          </p>
+        </section>
+
+        <section id="powerwall-pairing">
+          <h2 class="section-title">5. Powerwall local pairing</h2>
+          <p>
+            Local pairing allows MAP Energy to communicate with your Powerwall on your local
+            network for advanced diagnostics.
+          </p>
+
+          <h3>What you may need</h3>
+          <ul>
+            <li>Your Powerwall gateway password</li>
+            <li>A phone connected to the same local network</li>
+            <li>Access to the Powerwall if a pairing toggle is required</li>
+          </ul>
+
+          <div class="callout">
+            <p>
+              Local pairing is intended to unlock richer Powerwall diagnostics, such as battery
+              system data, gateway information and future advanced monitoring features.
+            </p>
+          </div>
+        </section>
+
+        <section id="diagnostics">
+          <h2 class="section-title">6. Powerwall diagnostics</h2>
+          <p>
+            The Powerwall diagnostics area is designed to show useful technical information from
+            your system.
+          </p>
+
+          <h3>Current diagnostic areas</h3>
+          <ul>
+            <li>Battery system information</li>
+            <li>System state of charge</li>
+            <li>Rated and actual system capacity where available</li>
+            <li>Frequency and voltage</li>
+            <li>Gateway host and DIN information</li>
+            <li>Raw diagnostic output for support</li>
+          </ul>
+
+          <p class="muted">
+            Some values depend on your Powerwall model, firmware version, local access and system configuration.
+          </p>
+        </section>
+
+        <section id="premium">
+          <h2 class="section-title">7. Premium access</h2>
+          <p>
+            Some MAP Energy features may require an active premium subscription or valid promotional access.
+          </p>
+          <ul>
+            <li>Premium status is checked inside the app</li>
+            <li>Promo codes are redeemed through Google Play</li>
+            <li>Premium access may need the app to be restarted after purchase or redemption</li>
+          </ul>
+        </section>
+
+        <section id="troubleshooting">
+          <h2 class="section-title">8. Troubleshooting</h2>
+
+          <h3>Powerwall cannot be found</h3>
+          <p>
+            Make sure your phone is connected to the same local network as your Powerwall.
+          </p>
+
+          <h3>Pairing does not complete</h3>
+          <p>
+            Follow the in-app pairing instructions carefully. Some systems may require a Powerwall
+            toggle before pairing is confirmed.
+          </p>
+
+          <h3>Internal tester warning on Google Play</h3>
+          <p>
+            If Google Play says you are an internal tester, leave the testing programme and reinstall
+            the production version from Google Play.
+          </p>
+
+          <h3>Premium does not show immediately</h3>
+          <p>
+            Close and reopen MAP Energy after redeeming a code or purchasing premium access.
+          </p>
+        </section>
+
+        <section id="links">
+          <h2 class="section-title">9. Useful links</h2>
+          <ul>
+            <li>
+              <a href="https://play.google.com/store/apps/details?id=com.mapenergy.app&pcampaignid=web_share">
+                MAP Energy on Google Play
+              </a>
+            </li>
+            <li><a href="/map-energy/privacy/">Privacy Policy</a></li>
+            <li><a href="/map-energy/terms/">Terms of Service</a></li>
+          </ul>
+        </section>
+
+        <section id="contact">
+          <h2 class="section-title">10. Contact</h2>
+          <p>
+            For support, questions or feedback:
+          </p>
+          <p>📧 <a href="mailto:support@aptica.uk">support@aptica.uk</a></p>
+        </section>
+
+        <footer>
+          © <span id="year"></span> Aptica Ltd. All rights reserved.
+        </footer>
+      </article>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
